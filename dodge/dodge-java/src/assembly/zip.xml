@@ -8,7 +8,7 @@
   <includeBaseDirectory>false</includeBaseDirectory>
   <files>
     <file>
-      <source>target/dodge-java-0.0.1-SNAPSHOT-bin.jar</source>
+      <source>target/dodge-java-${project.version}-bin.jar</source>
     </file>
   </files>
   <fileSets>
