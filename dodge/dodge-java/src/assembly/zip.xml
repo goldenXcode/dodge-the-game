@@ -1,0 +1,20 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+  <id>bundle</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <files>
+    <file>
+      <source>target/dodge-java-0.0.1-SNAPSHOT-bin.jar</source>
+    </file>
+  </files>
+  <fileSets>
+    <fileSet>
+      <directory>target/natives</directory>
+      <outputDirectory>natives</outputDirectory>
+    </fileSet>
+  </fileSets>
+</assembly>
