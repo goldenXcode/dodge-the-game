@@ -11,6 +11,7 @@
 
 == Version 0.2.0 ==
   * make intern state machine more flexible
+  * there is no clear init / exit strategy
   * vague controls
 
 == Future Versions ==
