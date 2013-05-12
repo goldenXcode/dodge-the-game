@@ -1,0 +1,17 @@
+#summary List of enhancement and problems.
+#labels Featured,Phase-Requirements
+
+= Enhancement and Problems =
+
+== Version 0.1.0 ==
+  * ~~welcome screen~~
+  * ~~basic game mechanics~~
+  * ~~highscores~~
+  * player can leave the screen
+
+== Version 0.2.0 ==
+  * make intern state machine more flexible
+  * vague controls
+
+== Future Versions ==
+  * Power-Ups (like Slowdown, Greater Smaller, Bonus points)
