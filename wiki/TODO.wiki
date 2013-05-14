@@ -25,4 +25,4 @@
   * (Nice2k) Persist Highscore
   * (Nice2k) some Background Images, new sprites for Actors
   * (Nice2k) Gamepad support
-  * [Nice2k] not only walls at the borders (barriers, maybe only for player not for enemies --> diffculty settings?)
+  * (Nice2k) not only walls at the borders (barriers, maybe only for player not for enemies --> diffculty settings?)
