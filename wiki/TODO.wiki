@@ -17,6 +17,7 @@
 
 == Future Versions ==
   * Power-Ups (like Slowdown, Greater Smaller, Bonus points)
+  * (Nice2k) WelcomeGameState with menu
   * (Nice2k) (more enemies) Smart enemies, try to find you
   * (Nice2k) (more enemies) different enemy speed, random movement for simple enemies
   * (Nice2k) Level-Design: time-based
