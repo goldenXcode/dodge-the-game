@@ -17,12 +17,12 @@
 
 == Future Versions ==
   * Power-Ups (like Slowdown, Greater Smaller, Bonus points)
-  * [Nice2k] [more enemies] Smart enemies, try to find you
-  * [Nice2k] [more enemies] different enemy speed, random movement for simple enemies
-  * [Nice2k] Level-Design: time-based
-  * [Nice2k] Options: Diffculty (more enemies, more time, less powerups, etc)
-  * [Nice2k] Sound
-  * [Nice2k] Persist Highscore
-  * [Nice2k] some Background Images, new sprites for Actors
-  * [Nice2k] Gamepad support
+  * (Nice2k) (more enemies) Smart enemies, try to find you
+  * (Nice2k) (more enemies) different enemy speed, random movement for simple enemies
+  * (Nice2k) Level-Design: time-based
+  * (Nice2k) Options: Diffculty (more enemies, more time, less powerups, etc)
+  * (Nice2k) Sound
+  * (Nice2k) Persist Highscore
+  * (Nice2k) some Background Images, new sprites for Actors
+  * (Nice2k) Gamepad support
   * [Nice2k] not only walls at the borders (barriers, maybe only for player not for enemies --> diffculty settings?)
