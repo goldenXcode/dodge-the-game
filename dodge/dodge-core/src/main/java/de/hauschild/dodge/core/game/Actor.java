@@ -52,6 +52,7 @@ public abstract class Actor {
 
   public void update(final int delta) {
     position = position.add(velocity);
+    bounce();
   }
 
   protected Point getPosition() {
@@ -68,6 +69,27 @@ public abstract class Actor {
 
   protected void setVelocity(final Point velocity) {
     this.velocity = velocity;
+  }
+
+  private void bounce() {
+    final float x = bounce(getPosition().getX(), PlayN.graphics().width(), getVelocity().getX());
+    final float y = bounce(getPosition().getY(), PlayN.graphics().height(), getVelocity().getY());
+    if (x != 0f || y != 0f) {
+      if (y == 0f) {
+        setVelocity(new Point(x, getVelocity().getY()));
+      } else if (x == 0f) {
+        setVelocity(new Point(getVelocity().getX(), y));
+      } else {
+        setVelocity(new Point(x, y));
+      }
+    }
+  }
+
+  private float bounce(final float value, final float max, final float velocity) {
+    if (value < 0f || value > max) {
+      return -velocity;
+    }
+    return 0f;
   }
 
 }
