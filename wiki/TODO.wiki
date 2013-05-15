@@ -7,7 +7,7 @@
   * ~~welcome screen~~
   * ~~basic game mechanics~~
   * ~~highscores~~
-  * ~~player can leave the screen~~
+  * ~~player can leave the screen (Issue 1)~~
   * highscores are not persistent
 
 == Version 0.2.0 ==
