@@ -27,3 +27,4 @@
   * (Nice2k) Gamepad support
   * (Nice2k) not only walls at the borders (barriers, maybe only for player not for enemies --> diffculty settings?)
   * (Nice2K + Klaus) Labyrinth-Modus
+  * (Klaus) momentan handgemachte Physik durch JBox2D ersetzen
