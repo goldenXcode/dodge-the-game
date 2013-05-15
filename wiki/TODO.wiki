@@ -8,7 +8,7 @@
   * ~~basic game mechanics~~
   * ~~highscores~~
   * ~~player can leave the screen (Issue 1)~~
-  * highscores are not persistent
+  * highscores are not persistent (Issue 2)
 
 == Version 0.2.0 ==
   * make intern state machine more flexible
