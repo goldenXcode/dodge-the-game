@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.googlecode.playn</groupId>
@@ -8,17 +7,17 @@
   </parent>
   <groupId>de.hauschild.dodge</groupId>
   <artifactId>dodge</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>pom</packaging>
   <url>https://code.google.com/p/dodge-the-game/</url>
   <scm>
     <connection>
-      scm:svn:http://dodge-the-game.googlecode.com/svn/trunk/dodge
+      scm:svn:http://dodge-the-game.googlecode.com/svn/tags/dodge-0.1.0
     </connection>
     <developerConnection>
-      scm:svn:https://dodge-the-game.googlecode.com/svn/trunk/dodge
+      scm:svn:https://dodge-the-game.googlecode.com/svn/tags/dodge-0.1.0
     </developerConnection>
-    <url>https://code.google.com/p/dodge-the-game/source/browse</url>
+    <url>https://code.google.com/p/dodge-the-game/source/browse/tags/dodge-0.1.0</url>
   </scm>
   <developers>
     <developer>
