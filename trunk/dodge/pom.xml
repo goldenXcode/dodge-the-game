@@ -7,17 +7,17 @@
   </parent>
   <groupId>de.hauschild.dodge</groupId>
   <artifactId>dodge</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://code.google.com/p/dodge-the-game/</url>
   <scm>
     <connection>
-      scm:svn:http://dodge-the-game.googlecode.com/svn/tags/dodge-0.1.0
+      scm:svn:http://dodge-the-game.googlecode.com/svn/trunk/dodge
     </connection>
     <developerConnection>
-      scm:svn:https://dodge-the-game.googlecode.com/svn/tags/dodge-0.1.0
+      scm:svn:https://dodge-the-game.googlecode.com/svn/trunk/dodge
     </developerConnection>
-    <url>https://code.google.com/p/dodge-the-game/source/browse/tags/dodge-0.1.0</url>
+    <url>https://code.google.com/p/dodge-the-game/source/browse</url>
   </scm>
   <developers>
     <developer>
