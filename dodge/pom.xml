@@ -10,6 +10,24 @@
   <artifactId>dodge</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <url>https://code.google.com/p/dodge-the-game/</url>
+  <scm>
+    <connection>
+      scm:svn:http://dodge-the-game.googlecode.com/svn/trunk/dodge
+    </connection>
+    <developerConnection>
+      scm:svn:https://dodge-the-game.googlecode.com/svn/trunk/dodge
+    </developerConnection>
+    <url>https://code.google.com/p/dodge-the-game/source/browse</url>
+  </scm>
+  <developers>
+    <developer>
+      <email>klaus.hauschild.1984@gmail.com</email>
+    </developer>
+    <developer>
+      <email>nice2000.de@googlemail.com</email>
+    </developer>
+  </developers>
   <prerequisites>
     <maven>3.0.4</maven>
   </prerequisites>
