@@ -7,6 +7,7 @@ import de.hauschild.dodge.core.Utils;
 import de.hauschild.dodge.core.highscore.Highscore;
 import de.hauschild.dodge.core.state.AbstractGameState;
 import de.hauschild.dodge.core.state.GameStateController;
+import de.hauschild.dodge.core.state.GameStateType;
 
 public class GameGameState extends AbstractGameState {
 
@@ -15,6 +16,11 @@ public class GameGameState extends AbstractGameState {
   private Player player;
   private Enemies enemies;
   private int start;
+
+  @Override
+  public GameStateType getType() {
+    return GameStateType.GAME;
+  }
 
   @Override
   public void init(final GameStateController gameStateController) {
