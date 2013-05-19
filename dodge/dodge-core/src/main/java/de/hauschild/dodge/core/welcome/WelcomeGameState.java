@@ -11,7 +11,7 @@ import de.hauschild.dodge.core.state.GameStateController;
 
 public class WelcomeGameState extends AbstractGameState {
 
-  private static int DODGE_TEXT_SCALE = 60;
+  private static int DODGE_TEXT_SIZE = 60;
   private GroupLayer rootLayer;
   private boolean goToNextState;
   private boolean startFadeOut;
@@ -25,7 +25,7 @@ public class WelcomeGameState extends AbstractGameState {
     super.init(gameStateController);
     rootLayer = PlayN.graphics().rootLayer();
     Utils.addBackGround(rootLayer, Color.rgb(255, 255, 255));
-    Utils.addMessageText(rootLayer, 200, 200, "dodge", DODGE_TEXT_SCALE, Color.rgb(255, 0, 0));
+    Utils.addMessageText(rootLayer, 200, 200, "dodge", DODGE_TEXT_SIZE, Color.rgb(255, 0, 0));
     Utils.addMessageText(rootLayer, 500, 460, "@2013 Klaus Hauschild", 12, Color.rgb(0, 0, 0));
     PlayN.pointer().setListener(new Listener() {
 
@@ -52,7 +52,7 @@ public class WelcomeGameState extends AbstractGameState {
   @Override
   public void paint(final float alpha) {
     // TODO: get better x value from text to set middle
-    rootLayer.get(1).setOrigin(70, DODGE_TEXT_SCALE / 2);
+    rootLayer.get(1).setOrigin(70, DODGE_TEXT_SIZE / 2);
     rootLayer.get(1).setRotation(smoothAngle);
 
     if (startFadeOut && smoothScale > 1) {
