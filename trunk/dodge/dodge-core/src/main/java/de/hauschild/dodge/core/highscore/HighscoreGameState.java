@@ -8,10 +8,16 @@ import playn.core.Pointer.Listener;
 import de.hauschild.dodge.core.Utils;
 import de.hauschild.dodge.core.state.AbstractGameState;
 import de.hauschild.dodge.core.state.GameStateController;
+import de.hauschild.dodge.core.state.GameStateType;
 
 public class HighscoreGameState extends AbstractGameState {
 
   private static final int GRAY = Color.rgb(75, 75, 75);
+
+  @Override
+  public GameStateType getType() {
+    return GameStateType.HIGHSCORE;
+  }
 
   @Override
   public void init(final GameStateController gameStateController) {

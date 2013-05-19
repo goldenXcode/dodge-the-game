@@ -8,10 +8,10 @@ import playn.core.Pointer.Listener;
 import de.hauschild.dodge.core.Utils;
 import de.hauschild.dodge.core.state.AbstractGameState;
 import de.hauschild.dodge.core.state.GameStateController;
+import de.hauschild.dodge.core.state.GameStateType;
 
 public class WelcomeGameState extends AbstractGameState {
 
-  private static int DODGE_TEXT_SIZE = 60;
   private GroupLayer rootLayer;
   private boolean goToNextState;
   private boolean startFadeOut;
@@ -21,11 +21,16 @@ public class WelcomeGameState extends AbstractGameState {
   private float smoothScale;
 
   @Override
+  public GameStateType getType() {
+    return GameStateType.WELCOME;
+  }
+
+  @Override
   public void init(final GameStateController gameStateController) {
     super.init(gameStateController);
     rootLayer = PlayN.graphics().rootLayer();
     Utils.addBackGround(rootLayer, Color.rgb(255, 255, 255));
-    Utils.addMessageText(rootLayer, 200, 200, "dodge", DODGE_TEXT_SIZE, Color.rgb(255, 0, 0));
+    addDefaultDodgeText(rootLayer);
     Utils.addMessageText(rootLayer, 500, 460, "@2013 Klaus Hauschild", 12, Color.rgb(0, 0, 0));
     PlayN.pointer().setListener(new Listener() {
 
