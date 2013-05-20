@@ -147,7 +147,7 @@ public class WelccomeMenuGameState extends AbstractGameState {
 
   @Override
   public void update(final int delta) {
-    // TODO Auto-generated method stub
+    // NOP
   }
 
 }
