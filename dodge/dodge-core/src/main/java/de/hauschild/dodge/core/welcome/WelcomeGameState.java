@@ -15,8 +15,8 @@ public class WelcomeGameState extends AbstractGameState {
   private GroupLayer rootLayer;
   private boolean goToNextState;
   private boolean startFadeOut;
-  private float angle = 0;
-  private float scale = 1;
+  private float angle;
+  private float scale;
   private float smoothAngle;
   private float smoothScale;
 
@@ -28,7 +28,13 @@ public class WelcomeGameState extends AbstractGameState {
   @Override
   public void init(final GameStateController gameStateController) {
     super.init(gameStateController);
+
+    // init params
+    angle = 0;
+    scale = 1;
+
     rootLayer = PlayN.graphics().rootLayer();
+    rootLayer.clear();
     Utils.addBackGround(rootLayer, Color.rgb(255, 255, 255));
     addDefaultDodgeText(rootLayer);
     Utils.addMessageText(rootLayer, 500, 460, "@2013 Klaus Hauschild", 12, Color.rgb(0, 0, 0));
