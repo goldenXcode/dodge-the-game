@@ -10,4 +10,4 @@
   * simple highscore
 
 == Version 0.2.0 ==
-  * Game Menu
+  * Menu
