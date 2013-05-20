@@ -50,7 +50,7 @@ public class WelccomeMenuGameState extends AbstractGameState {
     private void createDefaultEntries() {
       menuEntries.add(new MenuEntry("Start", GameStateType.GAME));
       menuEntries.add(new MenuEntry("Highscore", GameStateType.HIGHSCORE));
-      menuEntries.add(new MenuEntry("End", GameStateType.WELCOME));
+      menuEntries.add(new MenuEntry("End", GameStateType.END_GAME));
     }
 
     public List<MenuEntry> getEntryies() {
