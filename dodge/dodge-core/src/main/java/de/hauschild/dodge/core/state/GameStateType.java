@@ -2,5 +2,5 @@ package de.hauschild.dodge.core.state;
 
 public enum GameStateType {
 
-  WELCOME, WELCOME_MENU, GAME, HIGHSCORE;
+  WELCOME, WELCOME_MENU, GAME, HIGHSCORE, END_GAME;
 }

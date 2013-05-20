@@ -6,6 +6,7 @@ import java.util.List;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 
+import de.hauschild.dodge.core.exit.EndGameState;
 import de.hauschild.dodge.core.game.GameGameState;
 import de.hauschild.dodge.core.highscore.HighscoreGameState;
 import de.hauschild.dodge.core.welcome.WelccomeMenuGameState;
@@ -13,9 +14,7 @@ import de.hauschild.dodge.core.welcome.WelcomeGameState;
 
 public class GameStateController {
 
-  private final List<GameState> gameStates = Arrays.<GameState> asList(new WelcomeGameState(),
-      new WelccomeMenuGameState(), new GameGameState(),
-      new HighscoreGameState());
+  private final List<GameState> gameStates = Arrays.<GameState> asList(new WelcomeGameState(), new WelccomeMenuGameState(), new GameGameState(), new HighscoreGameState(), new EndGameState());
   private int currentState = -1;
 
   public void init() {
@@ -24,10 +23,10 @@ public class GameStateController {
 
   public void navigateTo(final GameStateType gameStateTypeToNavigate) {
     // find gameState
-    GameState nextGameState = Iterables.find(gameStates, new Predicate<GameState>() {
+    final GameState nextGameState = Iterables.find(gameStates, new Predicate<GameState>() {
 
       @Override
-      public boolean apply(GameState arg0) {
+      public boolean apply(final GameState arg0) {
         return arg0.getType().equals(gameStateTypeToNavigate);
       }
     });
