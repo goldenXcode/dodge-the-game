@@ -27,7 +27,7 @@ public class WelccomeMenuGameState extends AbstractGameState {
       this.gameStateType = gameStateType;
     }
 
-    public GameStateType getGameStateType(){
+    public GameStateType getGameStateType() {
       return gameStateType;
     }
 
@@ -40,6 +40,8 @@ public class WelccomeMenuGameState extends AbstractGameState {
   private class MenuEntryManager {
 
     private final List<MenuEntry> menuEntries = new ArrayList<MenuEntry>();
+    private MenuEntry currentMenuEntry;
+    private int pos = 1;
 
     public MenuEntryManager() {
       createDefaultEntries();
@@ -54,23 +56,47 @@ public class WelccomeMenuGameState extends AbstractGameState {
     public List<MenuEntry> getEntryies() {
       return menuEntries;
     }
+
+    public MenuEntry getSelected() {
+      return menuEntries.get(pos - 1);
+    }
+
+    public void next() {
+      pos++;
+      if (pos > menuEntryManager.getEntryies().size()) {
+        pos = 1;
+      }
+    }
+
+    public void previouse() {
+      pos--;
+      if (pos < 1) {
+        pos = menuEntryManager.getEntryies().size();
+      }
+
+    }
   }
 
   private static final int MENU_ENTRY_X_POS = (PlayN.graphics().width() / 2) + 100;
   private static final int MENU_ENTRY_TEXT_SIZE = 20;
   private GroupLayer rootLayer;
   private MenuEntryManager menuEntryManager;
-  private int pos = 1;
 
   @Override
   public GameStateType getType() {
     return GameStateType.WELCOME_MENU;
   }
 
-  protected void highLightMenuEntryPosition(final int pos) {
-    //TODO: text should ne yellow?
-    rootLayer.get(pos + 1).setTint(Color.argb(100, 255, 255, 0));
-    rootLayer.get(pos).setTint(Color.argb(255, 255, 0, 0));
+  protected void highlightMenuEntryPosition() {
+
+    for (int i = 2; i <= 4; i++) {
+      rootLayer.get(i).setTint(Color.argb(255, 255, 0, 0));
+    }
+    // TODO: text should ne yellow?
+    // +2 to ignore background layer and "dodge" layer
+    final int indexToHighlight = menuEntryManager.getEntryies().indexOf(menuEntryManager.getSelected()) + 2;
+    rootLayer.get(indexToHighlight).setTint(Color.argb(100, 255, 255, 0));
+
   }
 
   @Override
@@ -83,54 +109,44 @@ public class WelccomeMenuGameState extends AbstractGameState {
 
     menuEntryManager = new MenuEntryManager();
     int yPos = 50;
-    for (MenuEntry entry : menuEntryManager.getEntryies()) {
+    for (final MenuEntry entry : menuEntryManager.getEntryies()) {
       yPos = yPos + 50;
-      Utils
-      .addMessageText(rootLayer, MENU_ENTRY_X_POS, yPos, entry.getText(), MENU_ENTRY_TEXT_SIZE,
-          Color.rgb(255, 0, 0));
+      Utils.addMessageText(rootLayer, MENU_ENTRY_X_POS, yPos, entry.getText(), MENU_ENTRY_TEXT_SIZE, Color.rgb(255, 0, 0));
     }
     PlayN.keyboard().setListener(new Listener() {
 
-
       @Override
-      public void onKeyDown(Event event) {
-        // TODO: logic for position to MenuEntryManager, e.g. nextEntry, previousEntry
+      public void onKeyDown(final Event event) {
         if (event.key().equals(Key.DOWN)) {
-          pos++;
-          if (pos > menuEntryManager.getEntryies().size()) {
-            pos = 1;
-          }
+          menuEntryManager.next();
         } else if (event.key().equals(Key.UP)) {
-          pos--;
-          if (pos < 1) {
-            pos = menuEntryManager.getEntryies().size();
-          }
+          menuEntryManager.previouse();
         }
         if (event.key().equals(Key.ENTER)) {
-          gameStateController.navigateTo(menuEntryManager.getEntryies().get(pos - 1).getGameStateType());
+          final int selectedIndex = menuEntryManager.getEntryies().indexOf(menuEntryManager.getSelected());
+          gameStateController.navigateTo(menuEntryManager.getEntryies().get(selectedIndex).getGameStateType());
         }
-        System.out.println("pos " + pos);
       }
 
       @Override
-      public void onKeyTyped(TypedEvent event) {
+      public void onKeyTyped(final TypedEvent event) {
         // NOP
       }
 
       @Override
-      public void onKeyUp(Event event) {
+      public void onKeyUp(final Event event) {
         // NOP
       }
     });
   }
 
   @Override
-  public void paint(float alpha) {
-    highLightMenuEntryPosition(pos);
+  public void paint(final float alpha) {
+    highlightMenuEntryPosition();
   }
 
   @Override
-  public void update(int delta) {
+  public void update(final int delta) {
     // TODO Auto-generated method stub
   }
 
