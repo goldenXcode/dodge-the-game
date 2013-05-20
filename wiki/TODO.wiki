@@ -12,9 +12,11 @@
 
 == Version 0.2.0 ==
   * make intern state machine more flexible
+    * navigate to a GameStateType
   * there is no clear init / exit strategy
   * vague controls
   * eigene Point-Implementierung gegen pythagoras.f.Point austauschen
+  * new menu game state
 
 == Future Versions ==
   * Power-Ups (like Slowdown, Greater Smaller, Bonus points)
