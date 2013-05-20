@@ -12,7 +12,7 @@
 
 == Version 0.2.0 ==
   * make intern state machine more flexible
-    * navigate to a GameStateType
+    * navigate to a game state type
   * there is no clear init / exit strategy
   * vague controls
   * eigene Point-Implementierung gegen pythagoras.f.Point austauschen
