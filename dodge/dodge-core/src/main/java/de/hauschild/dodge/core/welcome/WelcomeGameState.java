@@ -2,6 +2,8 @@ package de.hauschild.dodge.core.welcome;
 
 import playn.core.Color;
 import playn.core.GroupLayer;
+import playn.core.Keyboard;
+import playn.core.Keyboard.TypedEvent;
 import playn.core.PlayN;
 import playn.core.Pointer.Event;
 import playn.core.Pointer.Listener;
@@ -37,7 +39,26 @@ public class WelcomeGameState extends AbstractGameState {
     rootLayer.clear();
     Utils.addBackGround(rootLayer, Color.rgb(255, 255, 255));
     addDefaultDodgeText(rootLayer);
+    Utils.addMessageText(rootLayer, 380, 400, "Press any key or click...", 20, Color.rgb(255, 0, 0));
     Utils.addMessageText(rootLayer, 500, 460, "@2013 Klaus Hauschild", 12, Color.rgb(0, 0, 0));
+    PlayN.keyboard().setListener(new Keyboard.Listener() {
+
+      @Override
+      public void onKeyDown(final playn.core.Keyboard.Event event) {
+        startFadeOut = true;
+      }
+
+      @Override
+      public void onKeyTyped(final TypedEvent event) {
+
+      }
+
+      @Override
+      public void onKeyUp(final playn.core.Keyboard.Event event) {
+
+      }
+    });
+
     PlayN.pointer().setListener(new Listener() {
 
       @Override
