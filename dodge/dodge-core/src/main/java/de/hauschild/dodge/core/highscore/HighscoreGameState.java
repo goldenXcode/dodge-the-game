@@ -23,7 +23,6 @@ public class HighscoreGameState extends AbstractGameState {
   public void init(final GameStateController gameStateController) {
     super.init(gameStateController);
     final GroupLayer rootLayer = PlayN.graphics().rootLayer();
-    rootLayer.clear();
     Utils.addBackGround(rootLayer, Color.rgb(255, 255, 255));
     Utils.addMessageText(rootLayer, 100, 60, "End!", 20, GRAY);
     Utils.addMessageText(rootLayer, 100, 160, "Current score:", 20, GRAY);

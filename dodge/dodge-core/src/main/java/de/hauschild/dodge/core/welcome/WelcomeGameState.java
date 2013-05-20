@@ -36,7 +36,6 @@ public class WelcomeGameState extends AbstractGameState {
     scale = 1;
 
     rootLayer = PlayN.graphics().rootLayer();
-    rootLayer.clear();
     Utils.addBackGround(rootLayer, Color.rgb(255, 255, 255));
     addDefaultDodgeText(rootLayer);
     Utils.addMessageText(rootLayer, 380, 400, "Press any key or click...", 20, Color.rgb(255, 0, 0));
