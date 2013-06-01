@@ -42,7 +42,6 @@ public class WelccomeMenuGameState extends AbstractGameState {
   private class MenuEntryManager {
 
     private final List<MenuEntry> menuEntries = new ArrayList<MenuEntry>();
-    private MenuEntry currentMenuEntry;
     private int pos = 1;
 
     public MenuEntryManager() {
